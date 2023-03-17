@@ -1,0 +1,141 @@
+{
+  
+  "318": {
+    "name": "Vitamin A",
+    "weight": "mmg",
+    "limit": 900
+
+  },
+  "324": {
+    "name": "Vitamin D",
+    "weight": "mmg",
+    "limit": 15
+
+  },
+  "573": {
+    "name": "Vitamin E",
+    "weight": "mg",
+    "limit": 15
+
+  },
+  "430": {
+    "name": "Vitamin K",
+    "weight": "mmg",
+    "limit": 120
+
+  },
+  "401": {
+    "name": "Vitamin C",
+    "weight": "mg",
+    "limit": 90
+  },
+  "404": {
+    "name": "Thiamin",
+    "weight": "mg",
+    "limit": 1.2
+  },
+  "405": {
+    "name": "Ribfolavin",
+    "weight": "mg",
+    "limit": 1.3
+  },
+  "406": {
+    "name": "Niacin",
+    "weight": "mg",
+    "limit": 16
+  },
+  "410": {
+    "name": "Pantothenic acid",
+    "weight": "mg",
+    "limit": 5
+  },
+  "417": {
+    "name": "Folate",
+    "weight": "mmg",
+    "limit": 400
+  },
+  "301": {
+    "name": "Calcium",
+    "weight": "mg",
+    "limit": 10000
+  },
+  "304": {
+    "name": "Magnesium",
+    "weight": "mg",
+    "limit": 400
+  },
+  "307": {
+    "name": "Sodium",
+    "weight": "mg",
+    "limit": 1500
+  },
+  "306": {
+    "name": "Potassium",
+    "weight": "mg",
+    "limit": 3700
+  },
+  "303": {
+    "name": "Iron",
+    "weight": "mg",
+    "limit": 14
+  },
+  "312": {
+    "name": "Copper",
+    "weight": "mg",
+    "limit": 1
+  },
+  "309": {
+    "name": "Zinc",
+    "weight": "mg",
+    "limit": 10
+  },
+  "317": {
+    "name": "Selenium",
+    "weight": "mmg",
+    "limit": 55
+  },
+  "221": {
+    "name": "Alcohol",
+    "weight": "g",
+    "limit": 100
+  },
+  "262": {
+    "name": "Caffeine",
+    "weight": "mg",
+    "limit": 100
+  },
+  "212": {
+    "name": "Fructose",
+    "weight": "g",
+    "limit": 100
+  },
+  "211": {
+    "name": "Glucose",
+    "weight": "g",
+    "limit": 100
+  },
+  "213": {
+    "name": "Lactose",
+    "weight": "g",
+    "limit": 100
+  },
+  "209": {
+    "name": "Starch",
+    "weight": "g",
+    "limit": 100
+  },
+  "210": {
+    "name": "Sucrose",
+    "weight": "g",
+    "limit": 100
+  },
+  "255": {
+    "name": "Water",
+    "weight": "g",
+    "limit": 2900
+  }
+}
+
+
+
+

@@ -1,0 +1,304 @@
+{
+  "foods": [
+    {
+      "food_name": "fish oil",
+      "brand_name": null,
+      "serving_qty": 1,
+      "serving_unit": "softgel caplets",
+      "serving_weight_grams": 18,
+      "nf_calories": 162.36,
+      "nf_total_fat": 18,
+      "nf_saturated_fat": 5.38,
+      "nf_cholesterol": 127.8,
+      "nf_sodium": 0,
+      "nf_total_carbohydrate": 0,
+      "nf_dietary_fiber": 0,
+      "nf_sugars": null,
+      "nf_protein": 0,
+      "nf_potassium": 0,
+      "nf_p": 0,
+      "full_nutrients": [
+        {
+          "attr_id": 203,
+          "value": 0
+        },
+        {
+          "attr_id": 204,
+          "value": 18
+        },
+        {
+          "attr_id": 205,
+          "value": 0
+        },
+        {
+          "attr_id": 207,
+          "value": 0
+        },
+        {
+          "attr_id": 208,
+          "value": 162.36
+        },
+        {
+          "attr_id": 255,
+          "value": 0
+        },
+        {
+          "attr_id": 268,
+          "value": 679.32
+        },
+        {
+          "attr_id": 291,
+          "value": 0
+        },
+        {
+          "attr_id": 301,
+          "value": 0
+        },
+        {
+          "attr_id": 303,
+          "value": 0
+        },
+        {
+          "attr_id": 304,
+          "value": 0
+        },
+        {
+          "attr_id": 305,
+          "value": 0
+        },
+        {
+          "attr_id": 306,
+          "value": 0
+        },
+        {
+          "attr_id": 307,
+          "value": 0
+        },
+        {
+          "attr_id": 309,
+          "value": 0
+        },
+        {
+          "attr_id": 312,
+          "value": 0
+        },
+        {
+          "attr_id": 315,
+          "value": 0
+        },
+        {
+          "attr_id": 317,
+          "value": 0
+        },
+        {
+          "attr_id": 318,
+          "value": 0
+        },
+        {
+          "attr_id": 319,
+          "value": 0
+        },
+        {
+          "attr_id": 320,
+          "value": 0
+        },
+        {
+          "attr_id": 324,
+          "value": 59.76
+        },
+        {
+          "attr_id": 328,
+          "value": 1.494
+        },
+        {
+          "attr_id": 401,
+          "value": 0
+        },
+        {
+          "attr_id": 404,
+          "value": 0
+        },
+        {
+          "attr_id": 405,
+          "value": 0
+        },
+        {
+          "attr_id": 406,
+          "value": 0
+        },
+        {
+          "attr_id": 410,
+          "value": 0
+        },
+        {
+          "attr_id": 415,
+          "value": 0
+        },
+        {
+          "attr_id": 417,
+          "value": 0
+        },
+        {
+          "attr_id": 418,
+          "value": 0
+        },
+        {
+          "attr_id": 431,
+          "value": 0
+        },
+        {
+          "attr_id": 432,
+          "value": 0
+        },
+        {
+          "attr_id": 435,
+          "value": 0
+        },
+        {
+          "attr_id": 601,
+          "value": 127.8
+        },
+        {
+          "attr_id": 606,
+          "value": 5.3806
+        },
+        {
+          "attr_id": 611,
+          "value": 0.0185
+        },
+        {
+          "attr_id": 612,
+          "value": 1.1745
+        },
+        {
+          "attr_id": 613,
+          "value": 2.9963
+        },
+        {
+          "attr_id": 614,
+          "value": 0.6997
+        },
+        {
+          "attr_id": 617,
+          "value": 2.6554
+        },
+        {
+          "attr_id": 618,
+          "value": 0.3625
+        },
+        {
+          "attr_id": 619,
+          "value": 0.2389
+        },
+        {
+          "attr_id": 620,
+          "value": 0.3161
+        },
+        {
+          "attr_id": 621,
+          "value": 1.9181
+        },
+        {
+          "attr_id": 626,
+          "value": 1.3525
+        },
+        {
+          "attr_id": 627,
+          "value": 0.5445
+        },
+        {
+          "attr_id": 628,
+          "value": 1.0775
+        },
+        {
+          "attr_id": 629,
+          "value": 1.8247
+        },
+        {
+          "attr_id": 630,
+          "value": 1.006
+        },
+        {
+          "attr_id": 631,
+          "value": 0.3551
+        },
+        {
+          "attr_id": 645,
+          "value": 6.0914
+        },
+        {
+          "attr_id": 646,
+          "value": 5.7361
+        }
+      ],
+      "nix_brand_name": null,
+      "nix_brand_id": null,
+      "nix_item_name": null,
+      "nix_item_id": null,
+      "upc": null,
+      "consumed_at": "2023-03-13T18:00:20+00:00",
+      "metadata": {
+        "is_raw_food": false
+      },
+      "source": 1,
+      "ndb_no": 4594,
+      "tags": {
+        "item": "fish oil",
+        "measure": null,
+        "quantity": "1.0",
+        "food_group": null,
+        "tag_id": 1318
+      },
+      "alt_measures": [
+        {
+          "serving_weight": 13.6,
+          "measure": "tbsp",
+          "seq": 1,
+          "qty": 1
+        },
+        {
+          "serving_weight": 4.5,
+          "measure": "tsp",
+          "seq": 2,
+          "qty": 1
+        },
+        {
+          "serving_weight": 218,
+          "measure": "cup",
+          "seq": 3,
+          "qty": 1
+        },
+        {
+          "serving_weight": 18,
+          "measure": "softgel caplets",
+          "seq": 80,
+          "qty": 1
+        },
+        {
+          "serving_weight": 100,
+          "measure": "g",
+          "seq": null,
+          "qty": 100
+        },
+        {
+          "serving_weight": 28.3495,
+          "measure": "wt. oz",
+          "seq": null,
+          "qty": 1
+        }
+      ],
+      "lat": null,
+      "lng": null,
+      "meal_type": 3,
+      "photo": {
+        "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+        "highres": null,
+        "is_user_uploaded": false
+      },
+      "sub_recipe": null,
+      "class_code": null,
+      "brick_code": null,
+      "tag_id": null
+    }
+  ]
+}
