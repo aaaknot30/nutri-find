@@ -130,7 +130,7 @@
           Good amount of fiber.
         {/if}
         {#if stateObj.sugar}
-          Its has a lot of sugar.
+          Its has some sugar.
         {/if}
 
         {#if stateObj.productNutrients.length > 0}

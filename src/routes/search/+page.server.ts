@@ -31,37 +31,36 @@ export const actions = {
 
 export const load = (async ({ fetch, url }) => {
 
-  const responseArr = [response1, response2, response3, response4, response5, response6, response7, response8, response9, response10,
-    response11, response12, response13, response14, response15, response16, response17,
-  ]
-const nutrientResponse = responseArr[Math.floor(Math.random() * responseArr.length)]
-// const nutrientResponse = responseArr[8]
+//   const responseArr = [response1, response2, response3, response4, response5, response6, response7, response8, response9, response10,
+//     response11, response12, response13, response14, response15, response16, response17,
+//   ]
+// const nutrientResponse = responseArr[Math.floor(Math.random() * responseArr.length)]
+// // const nutrientResponse = responseArr[8]
 
   let params = new URLSearchParams(url.search);
-  let nix_brand_id = params.get("nix_brand_id");
   let search = params.get("searchWord")
 
-  const searchWord = search ? search : 'eggs'
-  let word = formWord ? formWord : searchWord
+  const searchWord = search
+  let word = searchWord ? searchWord : formWord ? formWord : 'eggs'
 
-  // const NutrientResponse = await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients', {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     "User-agent": "Nutri-Find /0.1 +http://adb.nutri-find.com",
-  //     "x-app-id": "76d6d0d7",
-  //     "x-app-key": "d42baed76ad9da8fac74fb6b7ed9905d",
-  //     "x-remote-user-id": "0"
-  //   },
-  //   body: JSON.stringify(
-  //     {
-  //       "query": word,
-  //     }
-  //   )
-  // });
+  const NutrientResponse = await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "User-agent": "Nutri-Find /0.1 +http://adb.nutri-find.com",
+      "x-app-id": "76d6d0d7",
+      "x-app-key": "d42baed76ad9da8fac74fb6b7ed9905d",
+      "x-remote-user-id": "0"
+    },
+    body: JSON.stringify(
+      {
+        "query": word,
+      }
+    )
+  });
 
 
-  // const nutrientResponse = await NutrientResponse.json();
+  const nutrientResponse = await NutrientResponse.json();
 
 
   

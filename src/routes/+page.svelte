@@ -34,7 +34,7 @@
   const carbs = [
     "Beets",
     "Grapefruit",
-    "Lentils",
+    "Oats",
     "Quinoa",
     "Banana"
   ]
