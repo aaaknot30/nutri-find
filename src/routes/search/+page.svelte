@@ -5,102 +5,107 @@
   import nutrientDict from "../../json/nutrientDict.json";
   export let data: PageData;
 
-  // ---------- Build state object
-  let stateObj = {
-    productNutrients: [],
-    chartCarbs: 0,
-    chartProtein: 0,
-    chartFat: 0,
-  };
+    // ---------- Build state object
+    let stateObj = {
+      productNutrients: [],
+      chartCarbs: 0,
+      chartProtein: 0,
+      chartFat: 0,
+    };
 
-  // Add any high-dose nutrients for product
-  data.nutrientResponse.foods[0].full_nutrients.filter((item) => {
-    const _id = item.attr_id;
-    if (data.nutCodes[_id]) {
-      const perc = (item.value / data.nutCodes[_id].limit) * 100;
-      if (perc > 9) {
-        stateObj.productNutrients.push(data.nutCodes[_id].name);
+    if (data.nutrientResponse.foods) {
+        // Add any high-dose nutrients for product
+        data.nutrientResponse.foods[0].full_nutrients.filter((item) => {
+          const _id = item.attr_id;
+          if (data.nutCodes[_id]) {
+            const perc = (item.value / data.nutCodes[_id].limit) * 100;
+            if (perc > 9) {
+              stateObj.productNutrients.push(data.nutCodes[_id].name);
+            }
+          }
+        });
+
+        // Set true/false flags
+        if (
+          data.nutrientResponse.foods[0].nf_protein > 9 ||
+          data.nutrientResponse.foods[0].nf_protein >
+            data.nutrientResponse.foods[0].nf_total_carbohydrate * 0.2
+        ) {
+          stateObj.protein = true;
+        }
+        if (
+          data.nutrientResponse.foods[0].nf_total_fat > 8 ||
+          data.nutrientResponse.foods[0].nf_total_fat >
+            data.nutrientResponse.foods[0].nf_protein
+        ) {
+          stateObj.fat = true;
+        }
+        if (data.nutrientResponse.foods[0].nf_dietary_fiber > 2) {
+          stateObj.fiber = true;
+        }
+        if (
+          (data.nutrientResponse.foods[0].nf_sugars /
+            data.nutrientResponse.foods[0].nf_total_carbohydrate) *
+            100 >
+          40
+        ) {
+          stateObj.sugar = true;
+        }
+        if (
+          data.nutrientResponse.foods[0].nf_total_carbohydrate >
+          data.nutrientResponse.foods[0].nf_protein * 3
+        ) {
+          stateObj.carbs = true;
+        }
+
+        // Add data for pie chart
+        stateObj.chartCarbs =
+          data.nutrientResponse.foods[0].nf_total_carbohydrate * 4;
+        stateObj.chartProtein = data.nutrientResponse.foods[0].nf_protein * 4;
+        stateObj.chartFat = data.nutrientResponse.foods[0].nf_total_fat * 9;
+    
+
+          // Build pie chart
+          afterNavigate(() => {
+            /** @type {HTMLElement | null} */
+            const ctx = document.getElementById("myChart");
+            new Chart(ctx, {
+              type: "pie",
+              data: {
+                labels: ["Carbs", "Protein", "Fat"],
+                datasets: [
+                  {
+                    label: "# of Votes",
+                    data: [
+                      stateObj.chartCarbs,
+                      stateObj.chartProtein,
+                      stateObj.chartFat,
+                    ],
+                    borderWidth: 1,
+                  },
+                ],
+              },
+            });
+          });
       }
+
+    // Modal message components
+    let show = false;
+    let modalTitle;
+    let modalMessage;
+
+    // Show and load modal
+    function toggleShow(str) {
+      if (str === "close") {
+        show = false;
+      } else {
+        show = true;
+      }
+      modalTitle = str.nutrient;
+      modalMessage = nutrientDict[str.nutrient];
     }
-  });
 
-  // Set true/false flags
-  if (
-    data.nutrientResponse.foods[0].nf_protein > 9 ||
-    data.nutrientResponse.foods[0].nf_protein >
-      data.nutrientResponse.foods[0].nf_total_carbohydrate * 0.2
-  ) {
-    stateObj.protein = true;
-  }
-  if (
-    data.nutrientResponse.foods[0].nf_total_fat > 8 ||
-    data.nutrientResponse.foods[0].nf_total_fat >
-      data.nutrientResponse.foods[0].nf_protein
-  ) {
-    stateObj.fat = true;
-  }
-  if (data.nutrientResponse.foods[0].nf_dietary_fiber > 2) {
-    stateObj.fiber = true;
-  }
-  if (
-    (data.nutrientResponse.foods[0].nf_sugars /
-      data.nutrientResponse.foods[0].nf_total_carbohydrate) *
-      100 >
-    40
-  ) {
-    stateObj.sugar = true;
-  }
-  if (
-    data.nutrientResponse.foods[0].nf_total_carbohydrate >
-    data.nutrientResponse.foods[0].nf_protein * 3
-  ) {
-    stateObj.carbs = true;
-  }
 
-  // Add data for pie chart
-  stateObj.chartCarbs =
-    data.nutrientResponse.foods[0].nf_total_carbohydrate * 4;
-  stateObj.chartProtein = data.nutrientResponse.foods[0].nf_protein * 4;
-  stateObj.chartFat = data.nutrientResponse.foods[0].nf_total_fat * 9;
-
-  // Build pie chart
-  afterNavigate(() => {
-    /** @type {HTMLElement | null} */
-    const ctx = document.getElementById("myChart");
-    new Chart(ctx, {
-      type: "pie",
-      data: {
-        labels: ["Carbs", "Protein", "Fat"],
-        datasets: [
-          {
-            label: "# of Votes",
-            data: [
-              stateObj.chartCarbs,
-              stateObj.chartProtein,
-              stateObj.chartFat,
-            ],
-            borderWidth: 1,
-          },
-        ],
-      },
-    });
-  });
-
-  // Modal message components
-  let show = false;
-  let modalTitle;
-  let modalMessage;
-
-  // Show and load modal
-  function toggleShow(str) {
-    if (str === "close") {
-      show = false;
-    } else {
-      show = true;
-    }
-    modalTitle = str.nutrient;
-    modalMessage = nutrientDict[str.nutrient];
-  }
 </script>
 
 <!-- ------------------ HTML Begin --------------------- -->
@@ -109,7 +114,7 @@
   <section>
     <div class="section-item flex">
       <div>
-        <h2>{data.error}. Try again!</h2>
+        <h3>{data.error}. Try again!</h3>
       </div>
     </div>
   </section>
@@ -143,7 +148,7 @@
       </p>
       {#if show}
         <div id="myModal" class="modal">
-          <!-- Modal content -->
+
           <div class="modal-content">
             <span on:keydown on:click={() => toggleShow("close")} class="close"
               >&times;</span

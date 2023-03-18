@@ -61,6 +61,7 @@ export const load = (async ({ fetch, url }) => {
 
 
   const nutrientResponse = await NutrientResponse.json();
+  console.log(nutrientResponse)
 
 
   
@@ -69,6 +70,7 @@ export const load = (async ({ fetch, url }) => {
 
   if (nutrientResponse.message) {
     error = nutrientResponse.message
+    console.log("error", error)
   } else {
     const nameArr = nutrientResponse.foods[0].food_name.split('')
     title = nameArr[0].toUpperCase() + nameArr.slice(1).join('')
@@ -77,6 +79,6 @@ export const load = (async ({ fetch, url }) => {
   const nutCodes = nutrientCodes
 
   return {
-    nutrientResponse, title, nutCodes, targetData
+    nutrientResponse, title, nutCodes, targetData, error
   };
 }) satisfies PageServerLoad;
