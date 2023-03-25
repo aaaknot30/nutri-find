@@ -108,6 +108,7 @@
     border-radius: 1rem;
     margin: 0 0 0 0;
     background-color: white;
+    color: black;
   }
 
 
@@ -121,6 +122,11 @@
     flex-direction: column;
     align-items: center;
   }
+
+  input[type=text] {
+    margin: 0 .5rem 0 .5rem;
+  }
+
 
 }
 
