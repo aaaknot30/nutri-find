@@ -336,5 +336,21 @@
     color: darkblue;
     background-color: #eee;
   }
+
+  @media (max-width: 1100px) {
+    .flex {
+      flex-direction: column;
+    }
+
+    .flex div {
+      width: 90%;
+    }
+
+    .flex div:last-of-type {
+      width: 90%;
+    }
+
+  }
+
 </style>
 

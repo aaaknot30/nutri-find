@@ -111,6 +111,19 @@
   }
 
 
+@media (max-width: 1100px) {
+  main {
+    width: 98%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
 
 
 </style>
